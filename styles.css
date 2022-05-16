@@ -78,12 +78,40 @@ h1 {
 }
 
 #form-wrapper {
-    padding-left: 2rem;
+    padding: 0.5rem 0 0.5rem 2rem;
     background-color: #cec7c7;
 }
 
-ul {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+#button-wrapper {
+    padding-top: 1rem;
 }
+
+ul {
+    width: 100%;
+    columns: 2;
+    column-width: 10rem;
+    padding: 0;
+}
+
+ul li {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #c5c8ce;
+    border-radius: 5px;
+}
+
+input:focus {
+    border: 1px solid rgb(97, 97, 243);
+    outline: none;
+    box-shadow: 2px 2px 1px rgb(176, 173, 173);;
+}
+
+
