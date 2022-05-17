@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Zen+Loop&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
-
-/* Declare external font for logo */
+/* Declare external fonts */
 
 :root {
-    --logo-text-font: 'Zen Loop', cursive; 
+    --logo-text-font: 'Zen Loop', cursive;
+    --hero-text-font: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
@@ -17,6 +16,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    margin: 0;
 }
 
 .logo-header {
@@ -36,14 +36,17 @@ ul {
     width: 35%;
     position: relative;
     display: flex;
+    flex-grow: 1;
 }
 
 .right-content-wrapper {
-    background: #a9a4a4;
+    background: #4f4b4b;
     height: 100%;
     display: flex;
     width: 65%;
     flex-direction: column;
+    flex-grow: 1;
+    color: #ffffff;
 }
 
 .logo-wrapper {
@@ -69,38 +72,38 @@ h1 {
 #hero-wrapper p {
     position: relative;
     top: 40%;
-    width: 45%;
+    width: 60%;
     padding-left: 2rem;
+    font-family: var(--hero-text-font);
+    font-weight: bold;
 }
 
 #button-wrapper {
     padding-left: 2rem;
+    color: #ffffff
 }
 
 #form-wrapper {
-    padding: 0.5rem 0 0.5rem 2rem;
-    background-color: #cec7c7;
+    padding: 0.5rem 0 2rem 2rem;
+    background-color: #8c8383;
+    width: 99%;
+    overflow: hidden;
 }
 
 #button-wrapper {
     padding-top: 1rem;
 }
 
-ul {
-    width: 100%;
-    columns: 2;
-    column-width: 10rem;
-    padding: 0;
+.form-row {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
 }
-
-ul li {
-    width: 49%;
+label {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding-top: 0.5rem;
+    position: relative;
 }
-
 input {
     -webkit-appearance: none;
     appearance: none;
@@ -111,7 +114,38 @@ input {
 input:focus {
     border: 1px solid rgb(97, 97, 243);
     outline: none;
-    box-shadow: 2px 2px 1px rgb(176, 173, 173);;
+    box-shadow: 2px 2px 1px rgb(111, 106, 106);;
+}
+
+input:invalid {
+    border: 1px solid red;
+    outline: none;
 }
 
 
+#password:invalid + span:after {
+    color: red;
+    content: "* Passwords do not match";
+    font-size: 0.75rem;
+    position: absolute;
+}
+
+form {
+    color: #000000;
+}
+
+#submit-button {
+    background-color: rgb(21, 32, 24);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    padding: 0.75rem 2rem;
+    left: 1rem;
+}
+
+#sign-in {
+    text-decoration: none;
+    color: rgb(21, 32, 24);
+}

@@ -27,39 +27,40 @@
         <form action="fakewebsite.example" method="post">
             <div id="form-wrapper">
                 <h3 id="form-header">Let's do this</h3>
-                <ul id="form-list">
-                    <li>
-                        <label for="fname">First name</label>
+                <div class="form-row">
+                    <label for="fname">First name
                         <input type="text" id="fname" name="fname"> 
-                    </li>
+                    </label>
 
-                    <li>
-                        <label for="mail">Email</label>
-                        <input type="email" name="mail" id="mail">
-                    </li>
-                    <li>
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
-                    </li>
-                    <li>
-                        <label for="lname">Last name</label>
+                    <label for="lname">Last name
                         <input type="text" id="lname" name="lname">
-                    </li>
-                    <li>
-                            <label for="phone">Phone number</label>
-                            <input type="tel" name="phone" id="phone">
-                        </li>
+                    </label>
 
-                        <li>
-                            <label for="password-confirm">Confirm Password</label>
-                            <input type="password" name="password-confirm" id="password-confirm">
-                        </li>
-                    </ul>
                 </div>
+                <div class="form-row">
+                    <label for="mail">Email
+                        <input type="email" name="mail" id="mail" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                    </label>
+                    
+                    <label for="phone">Phone number
+                        <input type="tel" name="phone" id="phone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"> 
+                    </label>                   
+                </div>
+                <div class="form-row">
+                    <label for="password">Password
+                        <input class = "error" type="password" name="password" id="password">
+                        <span></span>
+                    </label>
+                    <label for="password-confirm">Confirm Password
+                        <input class="error" type="password" name="password-confirm" id="password-confirm">
+                    </label>                   
+                </div>
+            </div>
                 <div id="button-wrapper">
-                    <button type="submit" id="submit-button">Submit</button>
-
-                    <p>Already have an account?</p><a href="https://www.google.com/">Sign in</a>
+                    <button type="submit" id="submit-button">Create Account</button>
+                    <p>Already have an account? 
+                        <a id="sign-in" href="https://www.google.com/">Log in</a>
+                    </p>
                 </div>
             </form>
         </div>
