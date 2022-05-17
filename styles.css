@@ -31,12 +31,21 @@ ul {
     background-image: url("darkforest.jpg");
     background-repeat:  no-repeat; 
     background-position: center center;
-    background-size: 100%;
+    background-size:cover;
     height: 100%;
-    width: 35%;
+    width: min(350px, 35%);
     position: relative;
     display: flex;
-    flex-grow: 1;
+}
+.left-content-wrapper span{
+    position: absolute;
+    top: 95%;
+    left: 25%;
+}
+
+.photo-credit {
+    font-size: 0.75rem;
+    color: #d6cccc;
 }
 
 .right-content-wrapper {
@@ -72,10 +81,11 @@ h1 {
 #hero-wrapper p {
     position: relative;
     top: 40%;
-    width: 60%;
+    width: clamp(300px, 60%, 400px);
     padding-left: 2rem;
     font-family: var(--hero-text-font);
     font-weight: bold;
+    line-height: 1;
 }
 
 #button-wrapper {
@@ -86,7 +96,7 @@ h1 {
 #form-wrapper {
     padding: 0.5rem 0 2rem 2rem;
     background-color: #8c8383;
-    width: 99%;
+    width: 98%;
     overflow: hidden;
 }
 
@@ -103,6 +113,7 @@ label {
     display: flex;
     flex-direction: column;
     position: relative;
+    color: #000000;
 }
 input {
     -webkit-appearance: none;
@@ -115,6 +126,10 @@ input:focus {
     border: 1px solid rgb(97, 97, 243);
     outline: none;
     box-shadow: 2px 2px 1px rgb(111, 106, 106);;
+}
+
+input:valid {
+    border:1px solid green;
 }
 
 input:invalid {
@@ -143,9 +158,14 @@ form {
     position: relative;
     padding: 0.75rem 2rem;
     left: 1rem;
+    top: 0.5rem;
 }
 
 #sign-in {
     text-decoration: none;
     color: rgb(21, 32, 24);
+}
+
+#button-wrapper p {
+    padding-top: 1rem;
 }
